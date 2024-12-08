@@ -5,6 +5,10 @@ class BinaryClassificationModel(ABC):
     """
     Abstract base class for binary classification models.
     """
+    
+    def __init__(self):
+        super().__init__()
+        self.model = None
 
     @abstractmethod
     def train(self, X: np.ndarray, y: np.ndarray) -> None:
